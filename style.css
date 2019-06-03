@@ -1,0 +1,180 @@
+:root{
+    --font-one: 'reross-rectangular', sans-serif;
+    --font-two: 'Roboto', Arial, Helvetica, sans-serif;
+    --black: rgb(0, 0, 0);
+    --white: rgb(255, 252, 241);
+    --brown: rgb(254, 143, 29);
+    --background: rgb(246, 235, 97);
+    --blue-ish: rgb(0, 207, 180);
+}
+
+.module {
+    all: initial;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--white);
+}
+
+
+/* HEADER*/
+
+.logo, .logo-foot {
+    font-family: var(--font-one);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4rem;
+    padding-left: 2rem;
+}
+
+.menu-header {
+    font-family: var(--font-one);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.logo#logo {
+    flex-grow: 10;
+}
+
+a {
+    text-decoration: none;
+    color: var(--blue-ish);
+    padding: 1rem;
+}
+
+/* MAIN PART */
+
+.poster {
+    width: 100%;
+    height: 95vh;
+    background-color: var(--background);
+    display: flex;
+}
+
+.poster > h1 {
+    text-align: center;
+    font-family: var(--font-two);
+    font-weight: 700;
+    font-size: 6rem;
+    align-self: center;
+    margin: auto;
+}
+
+.description, .carousel-container {
+    text-align: center;
+    font-family: var(--font-two);
+    font-size: 2rem;
+    width: 80%;
+    margin: 4rem auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.carousel {
+    display: flex;
+}
+
+.carousel > figure > img {
+    width: 25rem;
+    height: 14rem;
+    border-radius: 8rem;
+}
+
+.carousel > figure {
+    margin: 2rem;
+}
+
+/* FOOT */
+.foot {
+    background-color: var(--brown);
+}
+
+.foot-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-right: 3vw;
+}
+
+.logo-foot {
+    color: var(--white);
+    flex-grow: 10;
+}
+
+.fab {
+    padding: 1rem;
+    color: var(--white);
+    font-size: 2rem;
+}
+
+/* MEDIA QUERIES */
+
+/*for small laptops*/
+@media only screen and (max-width: 1440px) {
+    .carousel {
+        flex-flow: column wrap;
+    }
+}
+
+@media only screen and (max-width: 1068px) {
+    .poster > h1 {
+        font-size: 4rem;
+    }
+    
+    .description, .carousel-container {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .poster > h1 {
+        font-size: 3rem;
+    }
+
+    .logo, .logo-foot {
+        font-size: 2rem;
+    }
+
+    .menu-header, .fab {
+        font-size: 1rem;
+    }
+
+    .carousel > figure > img {
+        width: 16rem;
+        height: 9rem;
+        border-radius: 8rem;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .poster > h1 {
+        font-size: 1.5rem;
+    }
+
+    .menu-header {
+        flex-flow: column wrap;
+        align-items: center;
+    }
+
+    .logo {
+        padding: 0;
+    }
+    
+    .link {
+        padding: 0.5rem;
+    }
+}
