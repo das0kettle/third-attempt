@@ -43,6 +43,9 @@ body {
     flex-wrap: wrap;
 }
 
+.invisible, #invisible-header {
+    display: none;
+}
 .logo#logo {
     flex-grow: 10;
 }
@@ -175,6 +178,19 @@ ul {
     }
     
     .link {
-        padding: 0.5rem;
+        display: none;
+    }
+    .invisible {
+        display: block;
+        text-align: center;
+        margin: 0.5rem;
+    }
+
+    .invisible > button {
+        font-family: var(--font-one);
+        color: var(--blue-ish);
+        padding: 0.25rem;
+        background-color: var(--white);
+        border: 1px solid var(--brown);
     }
 }
