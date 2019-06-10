@@ -1,14 +1,40 @@
-let button = document.getElementById('invisible-header');
+// TOGGLE MOBILE HEADER
+
+let header = document.getElementById('invisible-header');
 
 function trial() {
-    if (button.style.display === 'none') {
-        button.style.display = 'flex';
-        button.style.flexDirection = 'column';
-        button.style.alignContent = 'center';
-        button.style.textAlign = 'center';
-        button.style.padding = '0.5rem';
-        button.style.fontFamily = 'reross-rectangular';
+    if (header.style.display === 'none') {
+        header.style.display = 'flex';
+        header.style.flexDirection = 'column';
+        header.style.alignContent = 'center';
+        header.style.textAlign = 'center';
+        header.style.padding = '0.5rem';
+        header.style.fontFamily = 'reross-rectangular';
+        document.getElementById('bttn-mobile').innerHTML = 'close menu';
     } else {
-        button.style.display = 'none';
+        header.style.display = 'none';
+        document.getElementById('bttn-mobile').innerHTML = 'Menu';
     }
 }
+
+// SMOOTH MOBILE NAVIGATION OPEN
+
+document.getElementById('invisible-header')
+
+// SMOOTH SCROLLING FROM HEADER TO TOPICS
+
+document.querySelector('#about-us').scrollIntoView({
+    behavior: 'smooth'
+});
+
+document.querySelector('#solutions').scrollIntoView({
+    behavior: 'smooth'
+});
+
+document.querySelector('#foot').scrollIntoView({
+    behavior: 'smooth'
+});
+
+document.querySelector('#products').scrollIntoView({
+    behavior: 'smooth'
+});

@@ -14,22 +14,24 @@
 
 <body>
     <header>
-        
+
         <div class="menu-header">
-            <div class="logo" id="logo"><p>wpf</p></div>
+            <div class="logo" id="logo">
+                <p>wpf</p>
+            </div>
             <div class="link"><a href="#about-us">about us</a></div>
             <div class="link"><a href="#solutions">solutions</a></div>
             <div class="link"><a href="#foot">contacts</a></div>
-            <div class="link"><a href="#">four</a></div>
+            <div class="link"><a href="#products">products</a></div>
             <div class="link"><a href="#">five</a></div>
         </div>
 
-        <div class="invisible"><button onclick="trial()">Menu</button></div>
+        <div class="invisible"><button id="bttn-mobile" onclick="trial()">Menu</button></div>
         <div id="invisible-header">
             <div><a href="#about-us">about us</a></div>
             <div><a href="#solutions">solutions</a></div>
             <div><a href="#foot">contacts</a></div>
-            <div><a href="#">four</a></div>
+            <div><a href="#products">products</a></div>
             <div><a href="#">five</a></div>
         </div>
 
@@ -42,52 +44,119 @@
 
         <div class="description" id="about-us">
             <h1>Who the hell we are?</h1>
-            <p>We are company called Waste Processing Facilities. Our aim is to take care of waste after you take it to
+            <p class="intro-sentence text">We are company called Waste Processing Facilities. Our aim is to take care of
+                waste after you take it to
                 bin.
                 We sort waste into categories depending of material that waste is being made.
                 Then we process it. Processing type depends of category:
             </p>
-            <ul>
+            <ul class="list text">
                 <li>Plastics: shreddering, melting, refining into petrochemicals, asphalts, construction materials;</li>
                 <li>Metals: shreddering, melting(aluminum and light metals);</li>
                 <li>Wood: composting, burning, grinding;</li>
                 <li>Paper: refining, burning;</li>
                 <li>Organics: burning, composting, refining for chemicals and fuels;</li>
             </ul>
-            <p>..and so on and so forth</p>
+            <p class="text">..and so on and so forth</p>
         </div>
 
         <div class="carousel-container" id="solutions">
             <h1>How do we take out trash?</h1>
 
-            <p>We take out trash by cargo electric vehicles depending of type and quantity of trash you have.</p>
+            <p class="intro-sentence text">We take out trash by cargo electric vehicles depending on type and quantity
+                of
+                trash you have.</p>
 
             <div class="carousel">
                 <figure>
                     <img src="media/1.jpg" alt="individuals and e-waste">
-                    <figcaption> <strong>individuals and e-waste</strong> <br> lorem ipsum dolor sit amet I don't know
-                        what to write here </figcaption>
+                    <figcaption> <strong>individuals and e-waste</strong> <br>
+                        <p class="text">lorem ipsum dolor sit amet I don't know
+                            what to write here</p>
+                    </figcaption>
                 </figure>
 
                 <figure>
-                        <img src="media/2.jpg" alt="small & mid-business">
-                        <figcaption> <strong>small & mid-business</strong> <br> lorem ipsum dolor sit amet I don't know
-                            what to write here </figcaption>
+                    <img src="media/2.jpg" alt="small & mid-business">
+                    <figcaption> <strong>small & mid-business</strong> <br>
+                        <p class="text">lorem ipsum dolor sit amet I don't know
+                            what to write here</p>
+                    </figcaption>
                 </figure>
 
                 <figure>
-                        <img src="media/3.jpg" alt="regular facilities">
-                        <figcaption> <strong>regular facilities</strong> <br> lorem ipsum dolor sit amet I don't know
-                            what to write here </figcaption>
+                    <img src="media/3.jpg" alt="regular facilities">
+                    <figcaption> <strong>regular facilities</strong> <br>
+                        <p class="text">lorem ipsum dolor sit amet I don't know
+                            what to write here</p>
+                    </figcaption>
                 </figure>
             </div>
+        </div>
+
+        <div class="prdcts-main-heading">
+            <h1>Our Products</h1>
+        </div>
+
+        <div class="products" id="products">
+            
+            <div class="product one">
+                <h1 class="product-heading">Solvents</h1>
+                <p class="product-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime tempora
+                    ratione cupiditate nisi. Eum autem rerum veniam dolorum, ea id expedita sint hic maxime quibusdam
+                    debitis, veritatis fugiat sed saepe.</p>
+                <h2 class="proceed"> Learn More >> </h2>
+            </div>
+
+            <div class="product two">
+                <h1 class="product-heading">Fuels</h1>
+                <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+                    doloribus tempora necessitatibus praesentium id incidunt soluta commodi temporibus facilis ipsum
+                    harum non quibusdam laborum, aliquid optio excepturi illum impedit hic!</p>
+                <h2 class="proceed"> Learn More >> </h2>
+            </div>
+
+            <div class="product three">
+                <h1 class="product-heading">Plastics</h1>
+                <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic porro
+                    facere fuga officia laudantium, fugit alias minima voluptate, natus in consectetur quas dolore
+                    voluptas soluta ducimus vel explicabo, iste veniam.</p>
+                <h2 class="proceed"> Learn More >> </h2>
+            </div>
+
+            <div class="product four">
+                <h1 class="product-heading">Metals</h1>
+                <p class="product-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex nulla
+                    voluptas quibusdam sunt eos sapiente reprehenderit culpa, aliquam tenetur libero in nemo fugit
+                    commodi necessitatibus inventore asperiores animi, voluptatum similique!</p>
+                <h2 class="proceed"> Learn More >> </h2>
+            </div>
+
+            <div class="product five">
+                <h1 class="product-heading">Compost</h1>
+                <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex nobis
+                    delectus quaerat fugit exercitationem, veritatis est quos eos atque deleniti magnam animi amet in
+                    maxime quis? Quidem autem sunt non!</p>
+                <h2 class="proceed"> Learn More >> </h2>
+            </div>
+
+            <div class="product six">
+                <h1 class="product-heading">Electricity</h1>
+                <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio
+                    nihil, cum explicabo facere consectetur incidunt atque quaerat molestiae, obcaecati cumque
+                    asperiores enim temporibus reprehenderit aperiam repellendus iure totam quo? Voluptate?</p>
+                <h2 class="proceed"> Learn More >> </h2>
+            </div>
+
         </div>
     </main>
 
     <footer class="foot" id="foot">
 
         <div class="foot-icons">
-            <div class="logo-foot"><p>wpf</p></div>
+            <div class="logo-foot">
+                <p>wpf</p>
+            </div>
             <div<i class='fab fa-instagram'></i></div<i>
             <div><i class='fab fa-twitter'></i></div>
             <div><i class='fab fa-linkedin-in'></i></div>
