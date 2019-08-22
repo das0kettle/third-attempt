@@ -89,6 +89,7 @@ a {
 
 .description {
     text-align: left;
+    transition: all 1s ease-out;
 }
 
 .intro-sentence, .list, figcaption {
@@ -165,6 +166,7 @@ ul {
 
 .proceed:hover {
     transform: scale(1.1);
+    cursor: pointer;
 }
 
 .one, .two, .three, .four, .five, .six {
@@ -260,6 +262,10 @@ ul {
 
 /* for small tablets and bigger smartphones */
 @media only screen and (max-width: 768px) {
+    .invisible {
+        display: none;
+    }
+
     .poster > h1 {
         font-size: 3rem;
     }
@@ -281,22 +287,6 @@ ul {
 
 /* for mobile */
 @media only screen and (max-width: 425px) {
-    .poster > h1 {
-        font-size: 1.5rem;
-    }
-
-    .menu-header {
-        flex-flow: column wrap;
-        align-items: center;
-    }
-
-    .logo {
-        padding: 0;
-    }
-    
-    .link {
-        display: none;
-    }
     .invisible {
         display: block;
         text-align: center;
@@ -312,8 +302,24 @@ ul {
         border-radius: 1rem;
     }
 
+    .poster > h1 {
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        padding: 0;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+    }
+    
+    .link {
+        display: none;
+    }
+    
     .products {
         display: flex;
         flex-direction: column;
     }
+    
 }
