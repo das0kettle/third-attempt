@@ -10,7 +10,7 @@ function trial() {
         header.style.textAlign = 'center';
         header.style.padding = '0.5rem';
         header.style.fontFamily = 'reross-rectangular';
-        header.style.transition = 'display 2s ease-out';
+        header.style.transition = 'all 0.3s';
         document.getElementById('bttn-mobile').innerHTML = 'close menu';
     } else {
         header.style.display = 'none';
