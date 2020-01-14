@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WPF</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/cdt2iby.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 </head>
 
 <body>
@@ -21,18 +22,18 @@
             </div>
             <div class="link"><a href="#about-us">about us</a></div>
             <div class="link"><a href="#solutions">solutions</a></div>
-            <div class="link"><a href="#foot">contacts</a></div>
             <div class="link"><a href="#products">products</a></div>
+            <div class="link"><a href="#form">contact us</a></div>
             <div class="link"><a href="https://ivan-kirshak.github.io/">five</a></div>
         </div>
 
-        <div class="invisible"><button id="bttn-mobile" onclick="trial()">Menu</button></div>
+        <div class="invisible"><button id="bttn-mobile">Menu</button></div>
         <div id="invisible-header">
             <div><a href="#about-us">about us</a></div>
             <div><a href="#solutions">solutions</a></div>
-            <div><a href="#foot">contacts</a></div>
             <div><a href="#products">products</a></div>
-            <div><a href="#">five</a></div>
+            <div><a href="#form">contact us</a></div>
+            <div><a href="https://ivan-kirshak.github.io/">five</a></div>
         </div>
 
     </header>
@@ -155,6 +156,46 @@
                 <h2 class="proceed"> Learn More >> </h2>
             </div>
 
+        </div>
+
+        <div id="form" class="contact-form">
+            <h1>Order our visit to You</h1>
+            <form>
+                <br>
+                <label for="business-type">The order is from</label>
+                <select name="" id="selectBusiness">
+                    <option value="Private property">Private property</option>
+                    <option value="Municipality/City council">Municipality/City council</option>
+                    <option value="Small business">Small business</option>
+                    <option value="Mid-business">Mid-business</option>
+                    <option value="Enterprise">Enterprise</option>
+                </select>
+                <br>
+                <br>
+                <label for="waste-types">Select the type of waste You have:</label>
+                <select name="" id="selectWasteType">
+                    <option value="Unsorted">Unsorted waste</option>
+                    <option value="Paper">Paper</option>
+                    <option value="Plastic">Plastic</option>
+                    <option value="Wood">Wood</option>
+                    <option value="Metal">Metal</option>
+                    <option value="Organics">Organics</option>
+                </select>
+                <br>
+                <br>
+                <label for="address">Please print the address:</label>
+                <input type="text" name="address" id="address">
+                <br>
+                <br>
+                <label for="datetime">When shall we visit You?</label>
+                <input type="date" name="date" id="visitDate"> 
+                <br>
+                <br>
+                <input type="button" id="btnSubmit" value="Contact us!">
+            </form>
+        </div>
+        <div id="answer" class="answer">
+            
         </div>
     </main>
 

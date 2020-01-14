@@ -1,6 +1,6 @@
 :root{
     --font-one: 'reross-rectangular', sans-serif;
-    --font-two: 'Aileron', Arial, Helvetica, sans-serif;
+    --font-two: 'Roboto', Arial, Helvetica, sans-serif;
     --black: rgb(0, 0, 0);
     --white: rgb(255, 252, 241);
     --brown: rgb(254, 143, 29);
@@ -90,6 +90,9 @@ a {
 .description {
     text-align: left;
     transition: all 1s ease-out;
+    background-image: url(media/logo.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
 }
 
 .intro-sentence, .list, figcaption {
@@ -144,7 +147,7 @@ ul {
 }
 
 .product-heading {
-    font-family: 'Helvetica Now Display', sans-serif;
+    font-family: var(--font-two);
 }
 
 .product-description {
@@ -203,6 +206,36 @@ ul {
     background-color: rgb(0, 35, 156);
 }
 
+/* CONTACT FORM */
+
+.contact-form, .answer {
+    width: 80%;
+    margin: 2rem auto;
+    font-family: var(--font-two);
+    color: var(--black);
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+select, input[type="text"], input[type="date"] {
+    background-color: var(--white);
+    border: none;
+    border-bottom: 2px solid var(--black);
+    font-size: 1.2rem;
+    font-family: var(--font-two);
+}
+input[type="button"] {
+    font-size: 1.5rem;
+    font-family: var(--font-two);
+    font-weight: 700;
+}
+
+.alert {
+    background-color: rgb(255, 25, 0);
+    color: rgb(255, 255, 255);
+}
+
 /* FOOT */
 .foot {
     background-color: var(--brown);
@@ -237,6 +270,9 @@ ul {
 
     .carousel-container {
         height: auto;
+    }
+    .description {
+        background-image: none;
     }
 }
 
@@ -302,6 +338,10 @@ ul {
         border-radius: 1rem;
     }
 
+    #invisible-header > div {
+        padding: 0.5rem;
+    }
+
     .poster > h1 {
         font-size: 1.5rem;
     }
@@ -320,6 +360,9 @@ ul {
     .products {
         display: flex;
         flex-direction: column;
+    }
+    .contact-form, .answer {
+        font-size: 1rem;
     }
     
 }
