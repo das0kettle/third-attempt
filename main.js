@@ -47,18 +47,33 @@ document.querySelector('#products').scrollIntoView({
     behavior: 'smooth'
 });
 
+// To Top Button 
+let toTopBtn = document.getElementById("toTopBtn");
+let mainHeader = document.querySelector(".menu-header");
+
+function toTop() {
+    mainHeader.scrollIntoView({
+        behavior: 'smooth'
+    });
+}
+
+toTopBtn.addEventListener("click", toTop, false);
+
 // FORM HANDLING 
 function formHandle() {
     let businessVal = business.value;
     let wasteVal = waste.value;
     let addressVal = address.value;
-    let dateVal = new Date(date.value).toLocaleDateString();
-    if (addressVal != "" && dateVal != "") {
-        answer.innerHTML = `<h1>The order has been sent. We are creating ${businessVal} solution for You. We will take away your ${wasteVal} waste from ${addressVal} on ${dateVal}.</h1>`;
+    let dateVal = date.value;
+    let dateVisit = new Date(date.value).toLocaleDateString();
+    let regex = /[A-Za-z_0-9]/;
+    if (regex.test(addressVal) === true && dateVal !== "") {
+        answer.innerHTML = `<h1>The order has been sent. We are creating ${businessVal} solution for You. We will take away your ${wasteVal} waste from ${addressVal} on ${dateVisit}.</h1>`;
         form.classList.remove("alert");
     } else {
         answer.innerHTML = `<h1 style="color: red">Please, fill the form</h1>`;
         form.classList.add("alert");
+        address.focus();
     }
 }
 
