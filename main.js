@@ -6,6 +6,9 @@ let address = document.getElementById("address");
 let date = document.getElementById("visitDate");
 let button = document.getElementById("btnSubmit");
 let answer = document.getElementById("answer");
+let aboutUs = document.getElementById("about-us");
+let solutions = document.getElementById("solutions");
+let products = document.getElementById("products");
 
 // TOGGLE MOBILE HEADER
 
@@ -30,22 +33,33 @@ function trial() {
 btn.addEventListener("click", trial, false);
 
 // SMOOTH SCROLLING FROM HEADER TO TOPICS
+function aboutUsScroll() {
+    aboutUs.scrollIntoView({
+        behavior: 'smooth'
+    })
+}
+aboutUs.addEventListener("click",  aboutUsScroll, false);
 
-document.querySelector('#about-us').scrollIntoView({
-    behavior: 'smooth'
-});
+function solutionScroll() {
+    solutions.scrollIntoView({
+        behavior: 'smooth'
+    })
+}
+solutions.addEventListener("click", solutionScroll, false);
 
-document.querySelector('#solutions').scrollIntoView({
-    behavior: 'smooth'
-});
+function productScroll() {
+    products.scrollIntoView({
+        behavior: 'smooth'
+    })
+}
+products.addEventListener("click", productScroll, false);
 
-document.querySelector('#foot').scrollIntoView({
-    behavior: 'smooth'
-});
-
-document.querySelector('#products').scrollIntoView({
-    behavior: 'smooth'
-});
+function formScroll() {
+    form.scrollIntoView({
+        behavior: 'smooth'
+    })
+}
+form.addEventListener("click", formScroll, false);
 
 // To Top Button 
 let toTopBtn = document.getElementById("toTopBtn");
