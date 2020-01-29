@@ -9,6 +9,8 @@ let answer = document.getElementById("answer");
 let aboutUs = document.getElementById("about-us");
 let solutions = document.getElementById("solutions");
 let products = document.getElementById("products");
+let addressErr = document.getElementById("addressErr");
+let dateErr = document.getElementById("dateErr");
 
 // TOGGLE MOBILE HEADER
 
@@ -80,13 +82,20 @@ function formHandle() {
     let dateVal = date.value;
     let dateVisit = new Date(date.value).toDateString();
     let regex = /[A-Za-z_0-9]/;
-    if (regex.test(addressVal) === true && dateVal !== "") {
-        answer.innerHTML = `<h1>The order has been sent. We are creating ${businessVal} solution for You. We will take away your ${wasteVal} waste from ${addressVal} on ${dateVisit}.</h1>`;
-        form.classList.remove("alert");
-    } else {
+    if (regex.test(addressVal) === false || dateVal === "") {
         answer.innerHTML = `<h1 style="color: red">Please, fill the form</h1>`;
         form.classList.add("alert");
-        address.focus();
+        if (regex.test(address.value) === false) {
+            addressErr.innerHTML = `<h3 style="color: white">Please, print the address</h3>`;
+        }
+        if (date.value === "") {
+            dateErr.innerHTML = `<h3 style="color: white">Please, select the date</h3>`;
+        }
+    }  else {
+        answer.innerHTML = `<h1>The order has been sent. We are creating ${businessVal} solution for You. We will take away your ${wasteVal} waste from ${addressVal} on ${dateVisit}.</h1>`;
+        form.classList.remove("alert");
+        addressErr.innerHTML = "";
+        dateErr.innerHTML = "";
     }
 }
 
