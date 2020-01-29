@@ -12,21 +12,20 @@ let products = document.getElementById("products");
 
 // TOGGLE MOBILE HEADER
 
-let header = document.getElementById('invisible-header');
+let headerLinks = document.querySelector(".links");
 let btn = document.getElementById('bttn-mobile');
 
 function trial() {
-    if (header.style.display === 'none') {
-        header.style.display = 'flex';
-        header.style.flexDirection = 'column';
-        header.style.alignContent = 'center';
-        header.style.textAlign = 'center';
-        header.style.padding = '0.5rem';
-        header.style.fontFamily = 'reross-rectangular';
-        btn.innerHTML = 'close menu';
+    if (headerLinks.style.display === 'none') {
+        headerLinks.style.display = 'flex';
+        headerLinks.style.flexDirection = 'column';
+        headerLinks.style.alignContent = 'center';
+        headerLinks.style.textAlign = 'center';
+        headerLinks.style.padding = '0.5rem';
+        headerLinks.style.fontFamily = 'reross-rectangular';
+        headerLinks.style.fontSize = '1rem';
     } else {
-        header.style.display = 'none';
-        btn.innerHTML = 'Menu';
+        headerLinks.style.display = 'none';
     }
 }
 
@@ -79,7 +78,7 @@ function formHandle() {
     let wasteVal = waste.value;
     let addressVal = address.value;
     let dateVal = date.value;
-    let dateVisit = new Date(date.value).toLocaleDateString();
+    let dateVisit = new Date(date.value).toDateString();
     let regex = /[A-Za-z_0-9]/;
     if (regex.test(addressVal) === true && dateVal !== "") {
         answer.innerHTML = `<h1>The order has been sent. We are creating ${businessVal} solution for You. We will take away your ${wasteVal} waste from ${addressVal} on ${dateVisit}.</h1>`;
