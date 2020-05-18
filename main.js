@@ -18,7 +18,9 @@ let headerLinks = document.querySelector(".links");
 let btn = document.getElementById('bttn-mobile');
 
 function trial() {
-    if (headerLinks.style.display === 'none') {
+    if (headerLinks.style.display === 'flex') {
+        headerLinks.style.display = 'none'
+    } else {
         headerLinks.style.display = 'flex';
         headerLinks.style.flexDirection = 'column';
         headerLinks.style.alignContent = 'center';
@@ -26,41 +28,10 @@ function trial() {
         headerLinks.style.padding = '0.5rem';
         headerLinks.style.fontFamily = 'reross-rectangular';
         headerLinks.style.fontSize = '1rem';
-    } else {
-        headerLinks.style.display = 'none';
     }
 }
 
 btn.addEventListener("click", trial, false);
-
-// SMOOTH SCROLLING FROM HEADER TO TOPICS
-function aboutUsScroll() {
-    aboutUs.scrollIntoView({
-        behavior: 'smooth'
-    })
-}
-aboutUs.addEventListener("click",  aboutUsScroll, false);
-
-function solutionScroll() {
-    solutions.scrollIntoView({
-        behavior: 'smooth'
-    })
-}
-solutions.addEventListener("click", solutionScroll, false);
-
-function productScroll() {
-    products.scrollIntoView({
-        behavior: 'smooth'
-    })
-}
-products.addEventListener("click", productScroll, false);
-
-function formScroll() {
-    form.scrollIntoView({
-        behavior: 'smooth'
-    })
-}
-form.addEventListener("click", formScroll, false);
 
 // To Top Button 
 let toTopBtn = document.getElementById("toTopBtn");
@@ -73,6 +44,16 @@ function toTop() {
 }
 
 toTopBtn.addEventListener("click", toTop, false);
+
+let scrollButtonsArr = [aboutUs, solutions, products, form];
+
+for (let i = 0; i < scrollButtonsArr.length; i++) {
+    scrollButtonsArr[i].onclick = () => {
+        scrollButtonsArr[i].scrollItnoView({
+            behavior: 'smooth'
+        })
+    }
+}
 
 // FORM HANDLING 
 function formHandle() {
@@ -92,7 +73,9 @@ function formHandle() {
             dateErr.innerHTML = `<h3 style="color: white">Please, select the date</h3>`;
         }
     }  else {
-        answer.innerHTML = `<h1>The order has been sent. We are creating ${businessVal} solution for You. We will take away your ${wasteVal} waste from ${addressVal} on ${dateVisit}.</h1>`;
+        answer.innerHTML = `<h1>The order has been sent. We are creating ${businessVal} 
+        solution for You. We will take away your ${wasteVal} 
+        waste from ${addressVal} on ${dateVisit}.</h1>`;
         form.classList.remove("alert");
         addressErr.innerHTML = "";
         dateErr.innerHTML = "";
