@@ -236,10 +236,16 @@ select, input[type="text"], input[type="date"] {
     font-size: 1.2rem;
     font-family: var(--font-two);
 }
-input[type="button"] {
+#btnSubmit {
     font-size: 1.5rem;
     font-family: var(--font-two);
     font-weight: 700;
+    background: transparent;
+    padding: 1rem;
+    outline: none;
+    border: 2px solid var(--brown);
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .focus {
